@@ -2,9 +2,10 @@
 
 @section('main-content')
   <section class="container mt-5 mb-5">
-    <div class="row g-4">
+    <h1 class="mb-2">{{$title}}</h1>
+    <div class="row g-2">
         @foreach ($trains as $train)
-        <div class="card mx-2 my-2" style="width: 18rem;">
+        <div class="card mx-2 my-2 mt-2" style="width: 18rem;">
             <div class="card-header">
                 Treno 🚂
               </div>
