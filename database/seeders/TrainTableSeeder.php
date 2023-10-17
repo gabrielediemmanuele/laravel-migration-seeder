@@ -32,6 +32,8 @@ class TrainTableSeeder extends Seeder
             $train->cancellato = $faker->boolean();
             $train->prezzo_biglietto = $faker->randomFloat(8, 2);
             $train->codice_biglietto = $faker->randomNumber(10);
+
+            $train->save();
         }
     }
 }
