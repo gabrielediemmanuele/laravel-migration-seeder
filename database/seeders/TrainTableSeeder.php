@@ -16,6 +16,17 @@ class TrainTableSeeder extends Seeder
      */
     public function run()
     {
-        $train->
+        $train = new Train();
+        $train->azienda = "";
+        $train->stazione_di_partenza = "";
+        $train->stazione_di_arrivo = "";
+        $train->orario_di_partenza = "";
+        $train->orario_di_arrivo = "";
+        $train->codice_treno = "";
+        $train->numero_carrozze = "";
+        $train->in_orario = "";
+        $train->cancellato = "";
+        $train->prezzo_biglietto = "";
+        $train->codice_biglietto = "";
     }
 }
