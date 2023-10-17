@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Train;
+use Faker\Generator as Faker;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
