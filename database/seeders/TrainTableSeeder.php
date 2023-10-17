@@ -15,19 +15,23 @@ class TrainTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        $train = new Train();
-        $train->azienda = "";
-        $train->stazione_di_partenza = "";
-        $train->stazione_di_arrivo = "";
-        $train->orario_di_partenza = "";
-        $train->orario_di_arrivo = "";
-        $train->codice_treno = "";
-        $train->numero_carrozze = "";
-        $train->in_orario = "";
-        $train->cancellato = "";
-        $train->prezzo_biglietto = "";
-        $train->codice_biglietto = "";
+        for ($i = 0; $i < 10; $i++) {
+
+            $train = new Train();
+
+            $train->azienda = $faker->word();
+            $train->stazione_di_partenza = $faker->city();
+            $train->stazione_di_arrivo = $faker->city();
+            $train->orario_di_partenza = $faker->time();
+            $train->orario_di_arrivo = $faker->time();
+            $train->codice_treno = $faker->randomNumber(5);
+            $train->numero_carrozze = $faker->randomDigit();
+            $train->in_orario = $faker->boolean();
+            $train->cancellato = $faker->boolean();
+            $train->prezzo_biglietto = $faker->randomFloat(8, 2);
+            $train->codice_biglietto = $faker->randomNumber(10);
+        }
     }
 }
